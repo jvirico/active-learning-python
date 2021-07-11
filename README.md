@@ -1,4 +1,4 @@
-# Self-imposed coding challenges from my Active Learning routine
+# Self-imposed coding challenges from Active Learning routine
 ## In python
 ---
 **basic**
@@ -13,3 +13,7 @@
 **equations**
 
 4. Constant acceleration model
+
+**calculus**
+
+5. Derivative
