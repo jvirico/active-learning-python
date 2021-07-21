@@ -1,5 +1,4 @@
-# Self-imposed coding challenges from Active Learning routine
-## In python
+# Active Learing exercises for Python
 ---
 **basic**
 
@@ -16,4 +15,4 @@
 
 **calculus**
 
-5. Derivative
+5. Derivatives
