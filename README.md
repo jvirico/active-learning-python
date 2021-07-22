@@ -4,10 +4,11 @@
 
 1. Factorial of a number
 2. Area of a circle
+6. Python Arrays 
 
 **linear_algebra**
 
-3. Basic Matrix Operations
+1. Basic Matrix Operations
 
 **equations**
 
