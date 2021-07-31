@@ -26,8 +26,6 @@ for i in range(len(A)):
 print(C)
 
 
-
-
 '''Numpy'''
 import numpy as np
 

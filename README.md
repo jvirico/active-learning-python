@@ -9,10 +9,14 @@
 **linear_algebra**
 
 1. Basic Matrix Operations
+8. Vector operations
+   
+   **Exercise 1**
+![](./img/8_1.png)
 
 **equations**
 
-4. Constant acceleration model
+1. Constant acceleration model
 
 **calculus**
 
