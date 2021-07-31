@@ -67,6 +67,9 @@ print(S)
 '''REGEX'''
 import re
 
-S = 'Now we will look for a pattern inside this sentence...'
-match = re.match('Now(.*)', S)
-print(match)
+list = ['aaa yeah', 'bbb oou yeah']
+
+for element in list:
+    z = re.match("([a-z]\w+)\W([a-z]\w+)",element)
+    if z:
+        print(z.groups())
