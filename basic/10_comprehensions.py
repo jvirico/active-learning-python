@@ -51,3 +51,13 @@ print(next(G))
 
 # same but with built-in map
 print(list(map(sum,M)))
+
+# comprehensions to create other structures
+character_ordinals = [ord(x) for x in 'woord'] # list
+print(character_ordinals)
+ch_ord_set = {ord(x) for x in 'woord'} # set removes duplicates and sorts
+print(ch_ord_set)
+dictionary = {x: ord(x) for x in 'woord'}
+print(dictionary)
+generator = (ord(x) for x in 'word')
+print(generator)
