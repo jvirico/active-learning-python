@@ -19,7 +19,7 @@ print(E)
 raskolnikov = dict(name='raskolnikov', job='presidiary',age=24)
 print(raskolnikov)
 
-## ziooing
+## zipping
 rask = dict(zip(['A','B','C'],['a','b','c']))
 print(rask)
 
@@ -47,3 +47,4 @@ for key in Ks:
 print()
 for key in sorted(E):
     print(key, '=>', E[key])
+

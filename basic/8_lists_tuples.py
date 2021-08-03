@@ -34,3 +34,23 @@ n1 = {'key':'value'}
 print(n1)
 N = [m1,n1,3.999]
 print(N)
+
+## Tuples
+#   - Integrity constrain that differentiates them from lists,
+#   it may be needed an inmutable list to pass around.
+
+T = (1,2,3,4)
+print(T)
+print(T + (5,6))
+print(T.index(4))
+print(T.count(4))
+# Tuples can not be changed
+# T[0] = 2 => error!!
+T2 = (2,) + T[1:]
+print(T2)
+# accept multiple types like lists and dictionaries
+T3 = ('spam', 3.0, [1,2,3])
+print(T3)
+# parenthesis can be ommited
+T4 = 1.0, 2.0, 'aserejé'
+print(T4)

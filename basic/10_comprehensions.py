@@ -61,3 +61,13 @@ dictionary = {x: ord(x) for x in 'woord'}
 print(dictionary)
 generator = (ord(x) for x in 'word')
 print(generator)
+
+
+# Iteration
+squares = [x**2 for x in [1,2,3,4,5]]
+print(squares)
+
+# in plane for loop
+squares2 = []
+for x in [1,2,3,4,5]:
+    squares2.append(x**2)
