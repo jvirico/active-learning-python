@@ -27,3 +27,4 @@ Fig *. Operators
 **calculus**
 
 5. Derivatives
+15. Function extremas
