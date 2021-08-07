@@ -96,3 +96,17 @@ y = Fraction(4,6)
 
 print(x+y)
 print(x*y)
+z = Fraction(.25)
+print(z)
+print(z+y)
+w = Fraction(1000, 1234567890)
+print(w)
+
+r = (2.5).as_integer_ratio()
+print(r)
+f = 2.5
+r2 = Fraction(*f.as_integer_ratio())
+print(r2)
+
+f2 = Fraction.from_float(1.75)
+print(f2)
