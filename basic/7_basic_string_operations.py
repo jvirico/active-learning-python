@@ -73,3 +73,29 @@ for element in list:
     z = re.match("([a-z]\w+)\W([a-z]\w+)",element)
     if z:
         print(z.groups())
+
+
+# quoutes
+mantra = """Always look
+on the bright
+side of life ;)"""
+print(mantra)
+
+menu = (
+    "Paella "       # this way
+    "Valenciana "   # we can add comments
+    "de la mama")   # to each separate line
+
+print(menu)
+
+# string repetition
+print('-------- ...more... ---')
+print('-' * 80)
+
+# reading string characters
+myjob = "pyhtonian"
+for c in myjob:
+    print(c, end=' ')
+
+print('py' in myjob)
+print(myjob[0],myjob[-2])
