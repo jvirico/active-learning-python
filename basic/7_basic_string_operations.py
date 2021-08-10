@@ -67,9 +67,9 @@ print(S)
 '''REGEX'''
 import re
 
-list = ['aaa yeah', 'bbb oou yeah']
+list_ = ['aaa yeah', 'bbb oou yeah']
 
-for element in list:
+for element in list_:
     z = re.match("([a-z]\w+)\W([a-z]\w+)",element)
     if z:
         print(z.groups())
@@ -103,3 +103,32 @@ print(myjob[0],myjob[-2])
 # extended slicing
 s = 'amaasndufepll e;n)affdselfoa4'
 print(s[1:18:2])
+
+# string conversions
+print((int('23'), str(32),str('text')))
+print((repr(23.0),repr('23.0')))
+print()
+
+# converting binary to integer and biceversa
+decimalNum = int('101010',2)
+print(decimalNum)
+print(bin(decimalNum))
+
+## Strings are not editable, to modify a string we need to create a new one.
+try:
+    s[3] = 'x'
+except:
+    print('error happened')
+s_new = s[0:2] + 'x' + s[3:] # new string from previous
+print(s_new)
+
+s_new = s.replace('foa', 'thisisnew')
+print(s_new)
+
+###
+# String Methods
+##
+print('aa$bb$cc$dd'.replace('$','SPAM'))
+print('the string "pll" is in the position %s of the string "%s"'% (s.find('pll'),s))
+L = list(s)
+print(L)
