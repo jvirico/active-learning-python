@@ -132,3 +132,7 @@ print('aa$bb$cc$dd'.replace('$','SPAM'))
 print('the string "pll" is in the position %s of the string "%s"'% (s.find('pll'),s))
 L = list(s)
 print(L)
+print(type(L))
+l = ''.join(L) # back to a string
+print(l)
+print(type(l))
