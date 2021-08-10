@@ -99,3 +99,7 @@ for c in myjob:
 
 print('py' in myjob)
 print(myjob[0],myjob[-2])
+
+# extended slicing
+s = 'amaasndufepll e;n)affdselfoa4'
+print(s[1:18:2])
