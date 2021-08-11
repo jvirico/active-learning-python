@@ -146,4 +146,17 @@ print(line.upper())
 print(line.endswith('cc'))
 
 # formating expressions
+import math
 print('%s -- %s -- %s' % (42, 3.14159, [1, 2, 3]))
+x = math.pi
+print('integers: ...%d...%-6d...%06d' % (x, x, x))
+
+# based on dictionary
+print('%(qty)d more %(food)s'% {'qty':10, 'food': 'bananas'})
+
+template = '%s, %s and %s'
+print(template % ('first','second','third'))
+print(template)
+
+template = '%(motto)s, %(pork)s'
+print(template % {'motto':'spam', 'pork':'ham'})
