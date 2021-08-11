@@ -48,3 +48,12 @@ print()
 for key in sorted(E):
     print(key, '=>', E[key])
 
+
+print(list(D.keys()))
+print(list(D.values()))
+print(list(D.items()))
+D2 = {'punishment': 6, 'sister':'Doria¿'}
+D.update(D2)
+print(D)
+print(D.pop('sister'))
+print(D)
