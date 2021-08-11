@@ -54,3 +54,43 @@ print(T3)
 # parenthesis can be ommited
 T4 = 1.0, 2.0, 'aserejé'
 print(T4)
+
+res = [c * 2 for c in 'This is a string']
+print(res)
+
+# mapping a function across a sequence
+L1 = list(map(abs,[1,-2,-3,4]))
+print(L1)
+
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+print(matrix)
+print(matrix[0][1])
+matrix[0][0] = 9
+print(matrix)
+
+# replacement, insertion, deletion
+L1[1:2] = [4,5] # replacement
+print(L1)
+L1[3:3] = [6,7]
+print(L1)
+L1[5:] = []
+print(L1)
+
+L1 = [1]
+L1[:0] = [-2,-1,0]
+print(L1)
+L1[len(L1):] = [2,3]
+print(L1)
+
+# list methods
+L2 = [3,1,4,5]
+L2.sort()
+print(L2)
+print(L2.pop())
+print(L2)
+L2.reverse()
+print(L2)
+L2.reverse()
+print(list(reversed(L2)))
+L2.append(6)
+print(L2)
