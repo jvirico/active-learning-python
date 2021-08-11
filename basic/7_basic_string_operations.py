@@ -136,3 +136,14 @@ print(type(L))
 l = ''.join(L) # back to a string
 print(l)
 print(type(l))
+
+# 2966DAB5
+print('SPAM'.join(['eggs', 'sausage', 'ham', 'toast']))
+line = 'aaa bbb ccc'
+cols = line.split(' ')
+print(cols)
+print(line.upper())
+print(line.endswith('cc'))
+
+# formating expressions
+print('%s -- %s -- %s' % (42, 3.14159, [1, 2, 3]))
