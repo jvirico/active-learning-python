@@ -57,3 +57,21 @@ D.update(D2)
 print(D)
 print(D.pop('sister'))
 print(D)
+
+table = {1975: 'Holy Grail',
+        1979: 'Life of Brian',
+        1983: 'The Meaning of Life'}
+
+print(table[1979])
+print(list(table.items()))
+
+# Dictionaries for sparse data structrues
+Matrix = {}
+Matrix[(2,3,4)] = 88
+Matrix[(7,8,9)] = 99
+print(Matrix)
+
+X = 2
+Y = 3
+Z = 4
+print(Matrix[(X,Y,Z)])
