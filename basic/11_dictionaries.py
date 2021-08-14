@@ -75,3 +75,7 @@ X = 2
 Y = 3
 Z = 4
 print(Matrix[(X,Y,Z)])
+
+if (2, 3, 6) in Matrix: 
+    print(Matrix[(2, 3, 6)])
+else: print(0)
