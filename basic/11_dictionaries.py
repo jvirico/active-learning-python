@@ -79,3 +79,20 @@ print(Matrix[(X,Y,Z)])
 if (2, 3, 6) in Matrix: 
     print(Matrix[(2, 3, 6)])
 else: print(0)
+
+
+# Zip together keys and values, and some extra comprehensions for dictios
+L = list(zip(['a','b'],[1,2]))
+print(L)
+D = dict(zip(['a','b'],[1,2]))
+print(D)
+
+D = {k: v for (k,v) in zip(['a','b'],[1,2])} # equivalent using a comprehension
+print(D)
+
+# Sorting dictionaries
+D = {'a': 1, 'b': 2, 'c': 3}
+
+Ks = D.keys()
+Ks.sort()
+for k in Ks: print(k,D[k])
