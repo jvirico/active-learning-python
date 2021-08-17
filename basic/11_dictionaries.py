@@ -96,3 +96,11 @@ D = {'a': 1, 'b': 2, 'c': 3}
 Ks = D.keys()
 Ks.sort()
 for k in Ks: print(k,D[k])
+
+# DBM objets act very much like dictionaries
+import dbm
+
+file = dbm.open("./dbm_file",'c')
+file['key'] = 'data'
+print(file['key'])
+
