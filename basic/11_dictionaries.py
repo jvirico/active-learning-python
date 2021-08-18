@@ -104,3 +104,63 @@ file = dbm.open("./dbm_file",'c')
 file['key'] = 'data'
 print(file['key'])
 
+
+## End of chapter 8: quiz
+# two ways to build a list with 5 integer zeros
+L = [0,0,0,0,0,0,0,0,0,0]
+L2 = list((0,0,0,0,0,0,0,0,0,0))
+L3 = [0]*10
+print(L)
+print(type(L))
+print(L2)
+print(type(L2))
+print(L3)
+
+## Name two ways to build a dictionary with two keys, 'a' and 'b', each having an associated value of 0.
+D = dict(zip(['a','b'],[0,0]))
+D = dict(zip(('a','b'),(0,0)))
+D2 = {'a':0,'b':0}
+D3 = dict(zip(['a','b'],[0,0]))
+D4 = dict(a=0,b=0)
+D5 = {}
+D5['a'] = 0
+D5['b'] = 0
+print(D)
+print(D2)
+print(D3)
+print(D4)
+print(D5)
+
+## Name 4 operations that change a list object in place.
+L[0] = 1
+print(L)
+L.append(2)
+print(L)
+L.sort()
+print(L)
+L.extend([3,4])
+print(L)
+L.reverse()
+print(L)
+last = L.pop()
+print('extracts %s and leaves the lists as %s' % (last,L))
+L.reverse()
+L.remove(0)
+print(L)
+del L[0:2]
+print(L)
+
+## Name 4 operations that change a dictionary object in place.
+D['a'] = 1
+print(D)
+D['c'] = 10
+del D['b']
+print(D)
+D.update(D2)
+print(D)
+c = D.pop('c')
+print('extracts the value %s and leaves the dict as %s' % (c,D))
+
+## Why might you use a dictionary instead of a list?
+#   Dictionary are more human readible, better when the data is labeled. Lists are better suited to collections
+#   of unlabeled data. Dictionary lookup is also usually quicker than searching a list.
