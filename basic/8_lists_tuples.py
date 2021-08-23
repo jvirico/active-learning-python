@@ -94,3 +94,61 @@ L2.reverse()
 print(list(reversed(L2)))
 L2.append(6)
 print(L2)
+
+
+## More about Tuples
+#   Construct simple group objects. Work exactly like lists but the can not be changed (inmmutable).
+T = ()
+print(T)
+T = (0,'H2O',1.2,3)
+print(T)
+L = [1,2,3,T]
+L.sort()
+print(type(L))
+T = tuple(L)
+print(T)
+# concatenation
+T2 = (5,7)
+T3 = T + T2
+print(T3)
+T4 = T3 * 2
+print(T4)
+T = ('cc','aa','dd','bb')
+tmp = list(T)
+tmp.sort()
+T1 = tuple(tmp)
+print(T1)
+print(sorted(T))
+# Using a comprehension to create a list
+T = (1,2,3,4,5,2)
+L = [x*2 for x in T]
+print(L)
+print(T.count(2))
+# Tuple is inmutable but mutable members can change
+T = (1,2,3,[0,0])
+try:
+    T[0] = 100
+except:
+    print('T is inmutable')
+    pass
+T[3][0] = 'This is not inmutable'
+print(T)
+# dictios and tuples
+D = dict(name='Sonia',age='28',job=['pharma','crossfitter'])
+T = tuple(D.values())
+print(T)
+T = tuple(D.items())
+print(T)
+
+# Using teh collection namedtuple
+from collections import namedtuple
+
+Rec = namedtuple('Rec',['name','age','jobs'])
+javi = Rec('Javi',age=37.5,jobs=['data scientist','cv specialist','data architect'])
+print(javi)
+print(javi[2])
+j = javi._asdict()
+print(j['jobs'])
+print(j)
+for x in j:
+    print(j[x])
