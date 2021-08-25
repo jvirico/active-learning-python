@@ -44,7 +44,7 @@ S = 'sp\xc4m'
 print(S)
 print(S[2])
 
-file = open('./files/unidata.txt', 'w', encoding='utf-8')
+file = open('./files/unidata.txt', 'w', encoding='utf-8') # encoding param does not work in 2.X pythons
 file.write(S)
 file.close()
 
@@ -59,3 +59,28 @@ print(raw.decode('utf-8'))
 print(text.encode('latin-1'))
 print(text.encode('utf-16'))
 print(b'\xff\xfes\x00p\x00\xc4\x00m\x00'.decode('utf-16'))
+
+
+## More on Files
+myfile = open('./files/myfile.txt','w')
+myfile.write('this is an example line ;)\n')
+myfile.write('and now I close the file\n')
+myfile.close()
+
+# now ways to read files
+myfile = open('./files/myfile.txt','r')
+print(myfile.readline())
+print(myfile.readline())
+print(myfile.readline())
+myfile.close()
+print(open('./files/myfile.txt','r').read()) # reading all content
+# file iterator
+for line in open('./files/myfile.txt'):
+    print(line,end='')
+    print('new line')
+
+## Difference between Text files and Binary files
+#       Text files perform Unicode encodings and enf-of-line translation by default.
+#       Binary files allow programs to access file content unaltered.
+
+
