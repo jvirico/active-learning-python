@@ -83,4 +83,27 @@ for line in open('./files/myfile.txt'):
 #       Text files perform Unicode encodings and enf-of-line translation by default.
 #       Binary files allow programs to access file content unaltered.
 
+### Pickle files
+D = {'a':1,'b':2}
+F = open('./files/datafile.pkl','wb')
+import pickle
+pickle.dump(D,F)
+F.close()
+
+#getting D back
+F = open('./files/datafile.pkl','rb')
+E = pickle.load(F)
+print(E)
+
+### Json files
+name = dict(first='Bob', last='Smith')
+rec = dict(name=name, job=['dev', 'mgr'], age=40.5)
+print(rec)
+# we need to translate dict format to json enconding
+import json
+rec = json.dumps(rec)
+print(rec)
+# saving it to file
+F = open('./files/datafile.json','w')
+json.dump(rec,F)
 
