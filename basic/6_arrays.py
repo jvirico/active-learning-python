@@ -93,3 +93,12 @@ def findNumbers(nums):
     return count
 
 print(findNumbers([555,901,482,1771]))
+
+'''
+    Sorted squares
+'''
+
+def sortedSquares(nums):
+    return sorted([row**2 for row in nums])
+
+print(sortedSquares([-1,4,10,2,-123]))
