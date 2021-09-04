@@ -102,3 +102,4 @@ def sortedSquares(nums):
     return sorted([row**2 for row in nums])
 
 print(sortedSquares([-1,4,10,2,-123]))
+
