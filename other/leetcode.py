@@ -14,3 +14,33 @@ def answer(list):
 
 L = [1,1,0,1,0,1,1,1,0,0,0,1,1,1,1,0,0,1,1,0] # answer is 4
 print(answer([1,1,0,1,1,1]))
+print('next')
+
+# Duplicate zeros
+# Input: arr = [1,0,2,3,0,4,5,0]
+# Output: [1,0,0,2,3,0,0,4]
+#Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+
+def duplicateZeros(arr):
+    
+    L = []
+    length = len(arr)
+    for i in arr:
+        if(len(L)< length):
+            if(i == 0):
+                L.append(0)
+                L.append(0)
+            else:
+                L.append(i)
+        else:
+            arr.clear()
+            arr.extend(L)
+            if(len(arr)> length):
+                arr.pop()
+            break
+
+    return arr
+
+
+
+print(duplicateZeros(list([0,0,0,0,0])))
