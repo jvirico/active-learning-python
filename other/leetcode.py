@@ -52,9 +52,39 @@ print(duplicateZeros(list([0,0,0,0,0])))
 # The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
 
+def merge2(left,right):
+
+    if len(left)==0: return right
+    if len(right)==0: return left
+    
+    result = []
+    index_left = index_right = 0
+    
+    while len(result) < len(left) + len(right):
+        if left[index_left] <= right[index_right]:
+            result.append(left[index_left])
+            index_left += 1
+        else:
+            result.append(right[index_right])
+            index_right += 1
+        if index_right == len(right):
+            result += left[index_left:]
+            break
+        if index_left == len(left):
+            result += right[index_right:]
+            break
+    return result
+
 def merge(nums1,m,nums2,n):
     nums1[m:]=nums2
 
-    return sorted(nums1)
+    #return sorted(nums1)
+    midpoint = len(nums1) // 2
+    print('midpoint is %s'% midpoint)
+
+    return merge2(nums1[:midpoint],nums1[midpoint:])
+
+
+
 
 print(merge([1,2,3,0,0,0],3,[2,5,6],3))
