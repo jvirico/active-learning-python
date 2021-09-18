@@ -88,3 +88,74 @@ def merge(nums1,m,nums2,n):
 
 
 print(merge([1,2,3,0,0,0],3,[2,5,6],3))
+
+
+
+# binary gap
+def solution(N):
+    bN = bin(N)[2:]
+
+    print(bN)
+
+    maxlen = 0
+    auxlen = 0
+    inBetween = False
+    for i in range(len(bN)):
+        if(bN[i]=='1'):
+            maxlen=auxlen if auxlen>maxlen else maxlen
+            auxlen = 0
+        elif(bN[i]=='0'):
+            auxlen+=1
+        else:
+            auxlen=0
+
+    return maxlen
+
+
+print(solution(100))
+
+def solution2(A,K):
+
+    if(len(A)==K):
+        retorno = A
+    else:
+        B = A.copy()
+        for i in range(len(A)):
+            b_index = (i+K) % len(A)
+            B[b_index-1] = A[i]
+
+    return B
+
+print(solution2([1,2,3,4],2))
+
+
+def solution3(A):
+    D = {}
+    odd = None
+    for i in range(len(A)):
+        if not A[i] in D:
+            L = []
+            L.append(i)
+            D[A[i]]=L
+        else:
+            D[A[i]].append(i)
+        if(len(D[A[i]])%2 != 0):
+            odd = i
+    if(odd is not None):
+        return odd
+    else:
+        for i in D:
+            if(len(D[i])%2!=0):
+                return i
+
+A={}
+A[0] = 9
+A[1] = 3
+A[2] = 9
+A[3] = 3
+A[4] = 9
+A[5] = 9
+A[6] = 9
+
+print(solution3(A))
+
