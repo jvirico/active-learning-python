@@ -159,3 +159,11 @@ A[6] = 9
 
 print(solution3(A))
 
+import math
+
+def solution4(X,Y,D):
+    normalized = Y-X
+    jumps = normalized / D
+    return math.ceil(jumps)
+
+print(solution4(10,85,30))
