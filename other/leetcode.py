@@ -167,3 +167,20 @@ def solution4(X,Y,D):
     return math.ceil(jumps)
 
 print(solution4(10,85,30))
+
+
+def solution5(A):
+    if len(A)==0:
+        return 1
+    else:
+        L = sorted(A)
+        for i in range(len(A)):
+            if L[i]!= i+1:
+                return i+1
+        return len(A)+1
+
+A = [2,3,1,5]
+print(solution5(A))
+print(solution5([]))
+B=[1]
+print(solution5(B))
