@@ -184,3 +184,29 @@ print(solution5(A))
 print(solution5([]))
 B=[1]
 print(solution5(B))
+
+
+# performance issues O(N*N)
+def solution6(A):
+
+    min = sum(list(map(abs,A)))
+
+    for i in range(len(A)):
+        if i > 0:
+            left = sum(A[:i])
+            right = sum(A[i:])
+            dif = abs(left - right)
+            if dif < min: min = dif
+
+    return min
+
+A = [-1000,1000]
+A = [3,1,2,4,3]
+print(solution6(A))
+
+'''def solution7(A):
+
+    all_difs = list(map(lambda x: ,A))
+
+A = [3,1,2,4,3]
+print(solution7(A))'''
