@@ -45,7 +45,7 @@ def duplicateZeros(arr):
 
 print(duplicateZeros(list([0,0,0,0,0])))
 
-<<<<<<< HEAD
+
 
 '''
     Input: nums = [0,1,2,2,3,0,4,2], val = 2
@@ -103,7 +103,7 @@ def checkIfExists(arr):
     return False
 
 print(checkIfExists([-2,0,10,-19,4,6,-8]))
-=======
+
 ## Merge Sorted Array
 # Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
 # Output: [1,2,2,3,5,6]
@@ -269,4 +269,4 @@ print(solution6(A))
 
 A = [3,1,2,4,3]
 print(solution7(A))'''
->>>>>>> d8b300f5efd4a4326e455063af7d9bbe36deebcc
+
