@@ -45,6 +45,7 @@ def duplicateZeros(arr):
 
 print(duplicateZeros(list([0,0,0,0,0])))
 
+<<<<<<< HEAD
 
 '''
     Input: nums = [0,1,2,2,3,0,4,2], val = 2
@@ -102,3 +103,170 @@ def checkIfExists(arr):
     return False
 
 print(checkIfExists([-2,0,10,-19,4,6,-8]))
+=======
+## Merge Sorted Array
+# Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+# Output: [1,2,2,3,5,6]
+# Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+# The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+
+
+def merge2(left,right):
+
+    if len(left)==0: return right
+    if len(right)==0: return left
+    
+    result = []
+    index_left = index_right = 0
+    
+    while len(result) < len(left) + len(right):
+        if left[index_left] <= right[index_right]:
+            result.append(left[index_left])
+            index_left += 1
+        else:
+            result.append(right[index_right])
+            index_right += 1
+        if index_right == len(right):
+            result += left[index_left:]
+            break
+        if index_left == len(left):
+            result += right[index_right:]
+            break
+    return result
+
+def merge(nums1,m,nums2,n):
+    nums1[m:]=nums2
+
+    #return sorted(nums1)
+    midpoint = len(nums1) // 2
+    print('midpoint is %s'% midpoint)
+
+    return merge2(nums1[:midpoint],nums1[midpoint:])
+
+
+
+
+print(merge([1,2,3,0,0,0],3,[2,5,6],3))
+
+
+
+# binary gap
+def solution(N):
+    bN = bin(N)[2:]
+
+    print(bN)
+
+    maxlen = 0
+    auxlen = 0
+    inBetween = False
+    for i in range(len(bN)):
+        if(bN[i]=='1'):
+            maxlen=auxlen if auxlen>maxlen else maxlen
+            auxlen = 0
+        elif(bN[i]=='0'):
+            auxlen+=1
+        else:
+            auxlen=0
+
+    return maxlen
+
+
+print(solution(100))
+
+def solution2(A,K):
+
+    if(len(A)==K):
+        retorno = A
+    else:
+        B = A.copy()
+        for i in range(len(A)):
+            b_index = (i+K) % len(A)
+            B[b_index-1] = A[i]
+
+    return B
+
+print(solution2([1,2,3,4],2))
+
+
+def solution3(A):
+    D = {}
+    odd = None
+    for i in range(len(A)):
+        if not A[i] in D:
+            L = []
+            L.append(i)
+            D[A[i]]=L
+        else:
+            D[A[i]].append(i)
+        if(len(D[A[i]])%2 != 0):
+            odd = i
+    if(odd is not None):
+        return odd
+    else:
+        for i in D:
+            if(len(D[i])%2!=0):
+                return i
+
+A={}
+A[0] = 9
+A[1] = 3
+A[2] = 9
+A[3] = 3
+A[4] = 9
+A[5] = 9
+A[6] = 9
+
+print(solution3(A))
+
+import math
+
+def solution4(X,Y,D):
+    normalized = Y-X
+    jumps = normalized / D
+    return math.ceil(jumps)
+
+print(solution4(10,85,30))
+
+
+def solution5(A):
+    if len(A)==0:
+        return 1
+    else:
+        L = sorted(A)
+        for i in range(len(A)):
+            if L[i]!= i+1:
+                return i+1
+        return len(A)+1
+
+A = [2,3,1,5]
+print(solution5(A))
+print(solution5([]))
+B=[1]
+print(solution5(B))
+
+
+# performance issues O(N*N)
+def solution6(A):
+
+    min = sum(list(map(abs,A)))
+
+    for i in range(len(A)):
+        if i > 0:
+            left = sum(A[:i])
+            right = sum(A[i:])
+            dif = abs(left - right)
+            if dif < min: min = dif
+
+    return min
+
+A = [-1000,1000]
+A = [3,1,2,4,3]
+print(solution6(A))
+
+'''def solution7(A):
+
+    all_difs = list(map(lambda x: ,A))
+
+A = [3,1,2,4,3]
+print(solution7(A))'''
+>>>>>>> d8b300f5efd4a4326e455063af7d9bbe36deebcc
