@@ -327,3 +327,31 @@ def checkIfExists(arr):
 
 print(checkIfExists([-2,0,10,-19,4,6,-8]))
 
+
+
+def validMountainArray(arr):
+    
+    mountain = True
+    pic = False
+    climbed = False
+    unclimbed = False
+    j = arr[0]
+    first = True
+    for i in arr:
+        # valley case
+        if not first and i==j: return False
+        # climbing case (j<i) and not pic
+        if (j<i and not pic and not first): climbed = True
+        # pic case
+        if(not pic and i < j and not first):
+            # found pic
+            pic = True
+        # down hill case
+        if(i<j and pic and not first): unclimbed = True
+        if(pic and i > j and not first):
+            return False
+        first = False
+        j = i
+    return mountain if pic and climbed and unclimbed else False
+
+print(validMountainArray([3,2,1]))
