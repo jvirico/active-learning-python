@@ -356,3 +356,31 @@ def validMountainArray(arr):
     return True if pic and climbed and unclimbed else False
 
 print(validMountainArray([3,2,1]))
+
+
+def replaceelements(arr):
+    
+    l = len(arr)
+    for i in range(l):
+            if(i<l-1):
+                arr[i] = max(arr[i+1:])
+            else:
+                arr[i] = -1
+    return arr
+
+
+print(replaceelements([17,18,5,4,6,1]))
+
+
+def replaceelements_efficient(arr):
+    # minimize max function time by looping backwards and computing max of only two numbers, new and old_max
+    l = len(arr)
+    #new = arr.copy()
+    #new[-1] = -1
+    old_max = -1
+    for i in reversed(range(l)):
+        old_max, arr[i] = max(arr[i], old_max), old_max
+    arr[l-1]=-1
+    return arr
+
+print(replaceelements_efficient([17,18,5,4,6,1]))
