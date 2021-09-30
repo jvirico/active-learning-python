@@ -384,3 +384,20 @@ def replaceelements_efficient(arr):
     return arr
 
 print(replaceelements_efficient([17,18,5,4,6,1]))
+
+
+
+def moveZeros(nums):
+    
+    j = 0
+    for i in range(len(nums)):
+        num = nums[i]
+        if num!=0 and i != j:
+            nums[j] = num
+            nums[i]=0
+        if num!=0:
+            j+=1
+    return nums
+
+
+print(moveZeros([0,1,0,3,12]))
