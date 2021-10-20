@@ -401,3 +401,47 @@ def moveZeros(nums):
 
 
 print(moveZeros([0,1,0,3,12]))
+
+
+def sortArrayByParity(nums):
+
+    evens=0
+    odds=len(nums)-1
+    for i in range(len(nums)):
+        if evens + odds == len(nums): break
+        num = nums[i]
+        if num%2 == 0:
+            # even
+            odds+=1 if nums[evens]%2!=0 else odds
+            nums[i]=nums[evens]
+            nums[evens]=num
+            evens+=1
+        else:
+            # odd
+            evens-=1 if nums[odds]%2==0 else evens
+            nums[i]=nums[odds]
+            nums[odds]=num
+            odds-=1
+    
+    return nums
+
+print(sortArrayByParity([3,1,2,4]))
+
+def sortArrayByParity2(nums):
+    left=0
+    right=len(nums)-1
+
+    while left < right:
+        num=nums[left]
+        if num%2==0:
+            left+=1
+        else:
+            if nums[right]%2==0:
+                nums[left]=nums[right]
+                nums[right]=num
+                right-=1
+            else:
+                right-=1
+    return nums
+
+print(sortArrayByParity2([1,3,2,4]))

@@ -20,3 +20,8 @@ for i in range(10):
     time.sleep(0.3)
     pbar.update(10)
 pbar.close()
+
+
+##
+import sys
+print(sys.platform)
